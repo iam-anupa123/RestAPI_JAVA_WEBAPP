@@ -56,54 +56,21 @@ The Smart Campus API is a RESTful web service designed to manage campus infrastr
 
 ---
 
-## Setup and Installation
+## 2. Setup and Installation Instructions (NetBeans Environment)
+
+This project is configured for seamless deployment using the NetBeans IDE.
 
 ### Prerequisites
+* **Java:** JDK 11 or higher
+* **IDE:** Apache NetBeans
+* **Server:** A configured web server in NetBeans (e.g., Apache Tomcat)
 
-* Java: JDK 11 or higher
-* Build Tool: Apache Maven 3.6+
-* Web Server: Apache Tomcat 9.0
-
-### Build and Run
-
-1. Extract the Project
-   Unzip the project and open a terminal in the root directory (where pom.xml is located).
-
-2. Build the Project
-
-   ```bash
-   mvn clean install
-   ```
-
-3. Deploy to Tomcat
-
-   * Navigate to the target/ directory
-   * Copy the generated .war file (e.g., SmartCampusAPI.war)
-   * Paste it into the webapps/ folder of your Tomcat installation
-
-4. Start the Server
-
-   * Windows:
-
-     ```bash
-     startup.bat
-     ```
-   * Mac/Linux:
-
-     ```bash
-     ./startup.sh
-     ```
-
-5. Access the API
-
-   ```
-   http://localhost:8080/SmartCampusAPI/api/v1/
-   ```
-
-### IDE Alternative
-
-* Open the project in NetBeans or any Java IDE
-* Right-click the project and select Run
+### Step-by-Step Build and Launch
+1. **Open the Project:** Launch NetBeans, go to `File > Open Project`, and select the extracted project folder.
+2. **Clean and Build:** Right-click the project in the *Projects* window and select **Clean and Build**. This is a crucial step to ensure Maven wipes any old cached files, downloads all required dependencies, and compiles a completely fresh `.war` file.
+3. **Deploy the Server:** Right-click the project again and select **Run**. NetBeans will automatically package the `.war` file and deploy it to your configured server.
+4. **Access the API:** Once the Output window shows the server has started, the API entry point is accessible at:
+   `http://localhost:8080/SmartCampusAPI/api/v1/`
 
 ---
 
