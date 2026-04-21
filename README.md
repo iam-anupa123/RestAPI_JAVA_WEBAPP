@@ -5,13 +5,13 @@
 #### **UOW ID/IIT ID:** w2151915/20241759
 
 # Technical Overview & Setup Guide
----
+
 
 ## Overview
 
 The Smart Campus API is a RESTful web service designed to manage campus infrastructure, focusing on rooms and environmental sensors. It enables efficient monitoring, data collection, and system scalability for smart campus environments.
 
---
+
 
 ## API Design
 
@@ -55,7 +55,7 @@ The Smart Campus API is a RESTful web service designed to manage campus infrastr
   * 422 Unprocessable Entity
   * 500 Internal Server Error
 
----
+
 
 ## Setup and Installation Instructions (NetBeans Environment)
 
@@ -73,7 +73,7 @@ This project is configured for seamless deployment using the NetBeans IDE.
 4. **Access the API:** Once the Output window shows the server has started, the API entry point is accessible at:
    `http://localhost:8080/SmartCampusAPI/api/v1/`
 
----
+
 
 ## API Usage Examples (cURL)
 
@@ -113,7 +113,7 @@ curl -X POST http://localhost:8080/SmartCampusAPI/api/v1/sensors/S1/readings \
 curl -X GET "http://localhost:8080/SmartCampusAPI/api/v1/sensors?type=Temperature"
 ```
 
----
+
 
 ## Project Highlights
 
@@ -122,7 +122,7 @@ curl -X GET "http://localhost:8080/SmartCampusAPI/api/v1/sensors?type=Temperatur
 * Scalable and maintainable structure
 * Developer-friendly testing with cURL
 
----
+
 
 
 
