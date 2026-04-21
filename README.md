@@ -1,4 +1,4 @@
-# Conceptual Report: Smart Campus REST API
+# Conceptual Report:”Smart Campus” Sensor & Room Management API
 #### **Author:** Anupa Vitharana
 #### **ID:** w2151915/20241759
 
