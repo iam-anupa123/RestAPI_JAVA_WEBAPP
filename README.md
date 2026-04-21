@@ -125,7 +125,8 @@ curl -X GET "http://localhost:8080/SmartCampusAPI/api/v1/sensors?type=Temperatur
 
 
 
-
+# Demo Video
+[Watch the Demo Video Here](https://drive.google.com/file/d/1F-1fTlkQzM-P2cv5c_jzDIL-XV441HZp/view?usp=sharing)
 
 # Conceptual Report:”Smart Campus” Sensor & Room Management API
 ## Part 1: Service Architecture & Setup
