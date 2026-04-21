@@ -50,7 +50,7 @@
 ### Task 5.2: Dependency Validation (422 Unprocessable Entity)
 **Question:** Why is HTTP 422 often considered more semantically accurate than a standard 404 when the issue is a missing reference inside a valid JSON payload?
 
-**Answer:** HTTP 404 typically indicates that the requested URI itself does not exist. However, when the URI is correct and the JSON payload is parsable, but contains a logical error—such as a reference to a non-existent Room ID—HTTP 422 Unprocessable Entity is more accurate. It signals that the server understood the request but cannot process the instructions due to semantic errors in the provided data, rather than a simple failure to find an endpoint.
+**Answer:** HTTP 404 typically indicates that the requested URI itself does not exist. However, when the URI is correct and the JSON payload is parsable, but it contains logical errors such as a reference to a non-existent Room ID, HTTP returns 422 Unprocessable Entity, which is more accurate. It signals that the server understood the request but cannot process the instructions due to semantic errors in the provided data, rather than a simple failure to find an endpoint.
 
 ### Task 5.4: The Global Safety Net (500)
 **Question:** From a cybersecurity standpoint, explain the risks associated with exposing internal Java stack traces to external API consumers. What specific information could an attacker gather from such a trace?
