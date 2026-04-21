@@ -1,7 +1,165 @@
-# Conceptual Report:”Smart Campus” Sensor & Room Management API
-#### **Author:** Anupa Vitharana
-#### **ID:** w2151915/20241759
 
+# Smart Campus: Sensor & Room Management API
+
+**Author:** Anupa Vitharana
+**ID:** w2151915/20241759
+
+---
+
+## Overview
+
+The Smart Campus API is a RESTful web service designed to manage campus infrastructure, focusing on rooms and environmental sensors. It enables efficient monitoring, data collection, and system scalability for smart campus environments.
+
+---
+
+## API Design
+
+### Architecture
+
+* Built using Java 11 and JAX-RS (Jersey)
+* Follows a layered architecture:
+
+  * Controllers (Resources): Handle HTTP requests
+  * DAOs: Manage data storage and retrieval
+
+### Data Persistence
+
+* Uses an in-memory ConcurrentHashMap
+* Ensures thread safety and supports concurrent requests without race conditions
+
+### HATEOAS (Hypermedia as the Engine of Application State) (Discoverability)
+
+* Includes a root discovery endpoint
+* Clients can dynamically navigate API endpoints using hypermedia links
+
+### Sub-Resource Routing
+
+* Implements Sub-Resource Locator pattern
+* Supports nested endpoints like:
+
+  ```
+  /sensors/{id}/readings
+  ```
+* Maintains Single Responsibility Principle
+
+### Error Handling
+
+* Uses Exception Mappers and Filters
+* Prevents stack trace exposure
+* Returns proper HTTP status codes:
+
+  * 404 Not Found
+  * 409 Conflict
+  * 415 Unsupported Media Type
+  * 422 Unprocessable Entity
+  * 500 Internal Server Error
+
+---
+
+## Setup and Installation
+
+### Prerequisites
+
+* Java: JDK 11 or higher
+* Build Tool: Apache Maven 3.6+
+* Web Server: Apache Tomcat 9.0
+
+### Build and Run
+
+1. Extract the Project
+   Unzip the project and open a terminal in the root directory (where pom.xml is located).
+
+2. Build the Project
+
+   ```bash
+   mvn clean install
+   ```
+
+3. Deploy to Tomcat
+
+   * Navigate to the target/ directory
+   * Copy the generated .war file (e.g., SmartCampusAPI.war)
+   * Paste it into the webapps/ folder of your Tomcat installation
+
+4. Start the Server
+
+   * Windows:
+
+     ```bash
+     startup.bat
+     ```
+   * Mac/Linux:
+
+     ```bash
+     ./startup.sh
+     ```
+
+5. Access the API
+
+   ```
+   http://localhost:8080/SmartCampusAPI/api/v1/
+   ```
+
+### IDE Alternative
+
+* Open the project in NetBeans or any Java IDE
+* Right-click the project and select Run
+
+---
+
+## API Usage Examples (cURL)
+
+### 1. View API Discovery Endpoint
+
+```bash
+curl -X GET http://localhost:8080/SmartCampusAPI/api/v1/
+```
+
+### 2. Create a New Room
+
+```bash
+curl -X POST http://localhost:8080/SmartCampusAPI/api/v1/rooms \
+     -H "Content-Type: application/json" \
+     -d '{"id": "R1", "name": "Main Lab", "capacity": 30}'
+```
+
+### 3. Register a New Sensor
+
+```bash
+curl -X POST http://localhost:8080/SmartCampusAPI/api/v1/sensors \
+     -H "Content-Type: application/json" \
+     -d '{"id": "S1", "type": "Temperature", "roomId": "R1"}'
+```
+
+### 4. Add a Sensor Reading
+
+```bash
+curl -X POST http://localhost:8080/SmartCampusAPI/api/v1/sensors/S1/readings \
+     -H "Content-Type: application/json" \
+     -d '{"value": 24.5}'
+```
+
+### 5. Filter Sensors by Type
+
+```bash
+curl -X GET "http://localhost:8080/SmartCampusAPI/api/v1/sensors?type=Temperature"
+```
+
+---
+
+## Project Highlights
+
+* RESTful API design best practices
+* Clean separation of concerns
+* Scalable and maintainable structure
+* Developer-friendly testing with cURL
+
+---
+
+
+
+
+# Conceptual Report:”Smart Campus” Sensor & Room Management API
 ## Part 1: Service Architecture & Setup
 
 ### Task 1.1: Project & Application Configuration
