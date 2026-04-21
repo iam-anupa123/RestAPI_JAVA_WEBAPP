@@ -1,8 +1,8 @@
 
 # Smart Campus: Sensor & Room Management API
 
-**Author:** Anupa Vitharana
-**ID:** w2151915/20241759
+#### **Author:** Anupa Vitharana
+#### **UOW ID/IIT ID:** w2151915/20241759
 
 # Technical Overview & Setup Guide
 ---
