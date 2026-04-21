@@ -1,6 +1,6 @@
 # Conceptual Report: Smart Campus REST API
-**Author:** Anupa Vitharana
-**ID** w2151915/20241759
+## **Author:** Anupa Vitharana
+## **ID** w2151915/20241759
 
 ## Part 1: Service Architecture & Setup
 
