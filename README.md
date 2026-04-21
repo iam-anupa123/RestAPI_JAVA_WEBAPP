@@ -11,7 +11,7 @@
 
 The Smart Campus API is a RESTful web service designed to manage campus infrastructure, focusing on rooms and environmental sensors. It enables efficient monitoring, data collection, and system scalability for smart campus environments.
 
----
+--
 
 ## API Design
 
