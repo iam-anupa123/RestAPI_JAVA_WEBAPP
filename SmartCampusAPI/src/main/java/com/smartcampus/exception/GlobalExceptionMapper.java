@@ -1,4 +1,4 @@
-package com.smartcamput.exception;
+package com.smartcampus.exception;
 
 import javax.ws.rs.core.*;
 import javax.ws.rs.ext.*;

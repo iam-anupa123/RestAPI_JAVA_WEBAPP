@@ -1,4 +1,4 @@
-package com.smartcamput.exception;
+package com.smartcampus.exception;
 
 public class ErrorMessage {
     private String message;
