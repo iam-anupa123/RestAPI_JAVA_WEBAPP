@@ -4,6 +4,7 @@
 **Author:** Anupa Vitharana
 **ID:** w2151915/20241759
 
+# Technical Overview & Setup Guide
 ---
 
 ## Overview
@@ -56,7 +57,7 @@ The Smart Campus API is a RESTful web service designed to manage campus infrastr
 
 ---
 
-## 2. Setup and Installation Instructions (NetBeans Environment)
+## Setup and Installation Instructions (NetBeans Environment)
 
 This project is configured for seamless deployment using the NetBeans IDE.
 
